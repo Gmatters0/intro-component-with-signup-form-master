@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: hsl(0, 100%, 74%);
+    background-image: url('./images/bg-intro-desktop.png');
+}
+.main-section{
+    display: flex;
+    min-height: 100vh;
+}
+.main-section div{
+    flex-basis: 0;
+}
+.title{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.title-text-area{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.title-text-area p{
+    font-size: 16px;
+}
+h1{
+    font-size: 60px;
+    line-height: 1.2;
+}
+.form{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-header{
+    background-color: hsl(248, 32%, 49%);
+    width: 70%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    box-shadow: 0px 8px rgb(0 0 0 / 0.15);
+}
+.form-card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+    padding: 40px;
+    width: 70%;
+    box-shadow: 0px 8px rgb(0 0 0 / 0.15);
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    border-color: rgb(214, 214, 214);
+    border-radius: 5px;
+    border-style: solid;
+    height: 40px;
+
+    padding: 25px 30px;
+}
+
+button{
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    box-shadow: 0px 5px rgb(0 0 0 / 0.15);
+    cursor: pointer;
+    transition-duration: .1s;
+}
+button:hover{
+    background-color: hsl(154, 82%, 59%);
+}
+.form-card p{
+    font-size: 12px;
+    color: rgb(182, 182, 182);
+}
+.error-messages{
+    font-size: 10px;
+    text-align: right;
+    position: relative;
+    bottom: 20px;
+    color: hsl(0, 100%, 74%);
+    font-weight: 500;
+    font-style: italic;
+    visibility: hidden;
+}
+.error-icon{
+    width: 20px;
+    position: relative;
+    bottom: 40px;
+    left: 26vw;
+    visibility: hidden;
+}
+
+/* Error */
+.form-control img{
+    visibility: hidden;
+}
+.form-control small{
+    visibility: hidden;
+}
+
+.form-control.error input{
+    border-color: hsl(0, 100%, 74%);
+}
+
+.form-control.error img{
+    visibility: visible;
+}
+
+.form-control.error small{
+    visibility: visible;
+}
